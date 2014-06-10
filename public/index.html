@@ -11,13 +11,16 @@
 		<br/>
 		<br/>
 		<div class="clock" style="width:50%;margin: 0 auto;" ></div>
+		<img src="http://31.media.tumblr.com/tumblr_m9g02i76c51r88l59o1_500.gif"/>
+		<br/>
+		<a href=""/>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script src="/js/flipclock.min.js"></script>
 	</body>
 	<script type="text/javascript">
-		var d = new Date();
-		var k = new Date("June 10, 2014 04:00:00");
-		var t1 = d.getTime();
+		var now = new Date();
+		var k = new Date(Date.UTC(2014,05,10,02,0))
+		var t1 = now.getTime();
 		var t2 = t1 - k.getTime();
 		var clock = new FlipClock($('.clock'), {
 		});
