@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="/css/flipclock.css">
+	</head>
+	<body>
+		<div style="width:45%;margin: 0 auto;">
+			<h1 style="font-size:32pt;">
+				EUW DOWN SINCE
+			</h1>
+		</div>
+		<br/>
+		<br/>
+		<div class="clock" style="width:50%;margin: 0 auto;" ></div>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="/js/flipclock.min.js"></script>
+	</body>
+	<script type="text/javascript">
+		var d = new Date();
+		var k = new Date("June 10, 2014 04:00:00");
+		var t1 = d.getTime();
+		var t2 = t1 - k.getTime();
+		var clock = new FlipClock($('.clock'), {
+		});
+		clock.setTime(t2 / 1000);
+	</script>
+</html>
