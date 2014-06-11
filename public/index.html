@@ -11,6 +11,16 @@
 		<br/>
 		<br/>
 		<div class="clock" style="width:50%;margin: 0 auto;" ></div>
+		<div style="width:45%;margin: 0 auto;">
+			<h1 style="font-size:32pt;">
+				EUW DOWNTIME RECORD
+			</h1>
+		</div>
+		<br/>
+		<div class="clock2" style="width:50%;margin: 0 auto;" ></div>
+		<br>
+		<div>Achievement unlocked : Report Rito for AFK 24 Hours</div>
+		<br>
 		<img src="http://31.media.tumblr.com/tumblr_m9g02i76c51r88l59o1_500.gif" align="right"/>
 		<audio controls autoplay>
   			<source src="/darude.mp3" type="audio/mpeg">
@@ -22,12 +32,13 @@
 		<script src="/js/flipclock.min.js"></script>
 	</body>
 	<script type="text/javascript">
-		var now = new Date();
-		var k = new Date(Date.UTC(2014,05,10,02,0))
-		var t1 = now.getTime();
-		var t2 = t1 - k.getTime();
-		var clock = new FlipClock($('.clock'), {
+		var clock = new FlipClock($('.clock'),{
 		});
-		clock.setTime(t2 / 1000);
+		clock.setTime(0);
+		clock.stop();
+		var clock2 = new FlipClock($('.clock2'), {
+		});
+		clock2.setTime(24*60*60);
+		clock2.stop()
 	</script>
 </html>
